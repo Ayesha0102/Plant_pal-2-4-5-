@@ -14,6 +14,10 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/posts", require("./routes/postRoutes"));
 app.use("/api/growth", require("./routes/growthRoutes"));
+app.use("/api/collection", require("./routes/collectionRoutes"));
+app.use("/api/comments", require("./routes/commentRoutes"));
+app.use("/api/reactions", require("./routes/reactionRoutes"));
+app.use("/api/messages", require("./routes/messageRoutes"));
 
 app.get("/", (req, res) => {
   res.json({ message: "Plant Pal API is running" });
